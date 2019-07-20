@@ -1,0 +1,3 @@
+[submodule "SfinderAiIntegration/sfinder-cpp"]
+	path = SfinderAiIntegration/sfinder-cpp
+	url = https://github.com/knewjade/sfinder-cpp.git
