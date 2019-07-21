@@ -1,6 +1,7 @@
 ﻿#include <cstring>
 #include <vector>
 #include <array>
+#include <cassert>
 
 #include "sfinder-cpp/src/sfinder/perfect_clear/full_finder.hpp"
 
@@ -35,30 +36,78 @@ auto factory = core::Factory::create();
 auto moveGenerator = core::srs::MoveGenerator(factory);
 auto finder = sfinder::perfect_clear::Finder<core::srs::MoveGenerator>(factory, moveGenerator);
 
+core::PieceType charToPiece(char ch) {
+	switch (ch) {
+	case 'S':
+		return core::PieceType::S;
+	case 'Z':
+		return core::PieceType::Z;
+	case 'J':
+		return core::PieceType::J;
+	case 'L':
+		return core::PieceType::L;
+	case 'T':
+		return core::PieceType::T;
+	case 'O':
+		return core::PieceType::O;
+	case 'I':
+		return core::PieceType::I;
+	}
+	assert(false);
+	return static_cast<core::PieceType>(-1);
+}
+
 /// パフェ率を計算します。
-DLL_MAIN double solution_finder_perfect()
+/// 入力される
+/// 入力値に問題がある場合は` 0.0より小さい値` を返します
+DLL_MAIN double solution_finder_perfect(uint64_t low_board, const char* reminder, int max_line)
 {
-	/// とりあえずテストコードそのまま
-	auto permutationVector = std::vector{
-		sfinder::Permutation::create<2>(std::array<core::PieceType, 2>{core::PieceType::L, core::PieceType::J}, 2),
-		sfinder::Permutation::create<7>(core::kAllPieceType, 4)
+	// ライン数のチェック
+	if (max_line <= 0 || 6 < max_line)
+	{
+		return -1.0;
+	}
+
+	// フィールドの定義
+	const auto field = core::Field(low_board);
+
+	// 残りの空間が4の倍数ではないとき、0.0を返却
+	const auto num_blocks = field.numOfAllBlocks();
+	const auto num_spaces = max_line * 10 - num_blocks;
+	if (num_spaces % 4 != 0)
+	{
+		return 0.0;
+	}
+
+	// おくべき残りのミノの個数
+	const auto max_depth = num_spaces / 4;
+
+	// reminderの型を変換
+	auto pieces = std::vector<core::PieceType>{};
+	for (const char* p = &reminder[0]; *p != '\0'; ++p)
+	{
+		pieces.emplace_back(charToPiece(*p));
+	}
+
+	// reminderに6ミノ以上ある場合はエラー
+	const int pieces_size = pieces.size();
+	if (6 < pieces_size)
+	{
+		assert(false);
+		return -1.0;
+	}
+
+	// ミノの定義
+	// 全体で6ミノを置く想定。そのためreminderが2文字のとき、後ろに*p4を加える
+	//  ex) [LJ]!, *p4
+	auto permutation_vector = std::vector{
+		sfinder::Permutation::create(pieces, pieces_size),
+		sfinder::Permutation::create<7>(core::kAllPieceType, 6 - pieces_size)
 	};
-	auto permutations = sfinder::Permutations::create(permutationVector);
+	const auto permutations = sfinder::Permutations::create(permutation_vector);
 
-	const int maxDepth = 5;
-	const int maxLine = 4;
-
-	auto reverseLookup = sfinder::ReverseLookup::create(maxDepth, permutations.depth());
-
+	// パフェ成功確率の計算
+	const auto reverseLookup = sfinder::ReverseLookup::create(max_depth, permutations.depth());
 	auto percentage = sfinder::Percentage<>(finder, permutations, reverseLookup);
-
-	/// sが使えなかったので消した。(動き的には問題ないはず)
-	auto field = core::createField(""
-		"XX_______X"
-		"XXX______X"
-		"XXXX___XXX"
-		"XXX____XXX"
-		""
-	);
-	return percentage.run(field, maxDepth, maxLine) / static_cast<double>(permutations.size());
+	return percentage.run(field, max_depth, max_line) / static_cast<double>(permutations.size());
 }
