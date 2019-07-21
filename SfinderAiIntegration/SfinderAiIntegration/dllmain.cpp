@@ -57,10 +57,10 @@ core::PieceType charToPiece(char ch) {
 	return static_cast<core::PieceType>(-1);
 }
 
-/// パフェ率を計算します。
-/// 入力される
-/// 入力値に問題がある場合は` 0.0より小さい値` を返します
-DLL_MAIN double solution_finder_perfect(uint64_t low_board, const char* reminder, int max_line)
+/// パフェ成功確率を計算します。
+/// 入力できるライン数は最大で6ラインまで。
+/// 入力値に問題がある場合は` 0.0より小さい値` を返します。
+DLL_MAIN double calc_pc_success_rate(uint64_t low_board, const char* reminder, int max_line)
 {
 	// ライン数のチェック
 	if (max_line <= 0 || 6 < max_line)
