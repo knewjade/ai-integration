@@ -13,105 +13,105 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\core\bits.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\core\factory.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\core\field.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\core\moves.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\core\piece.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\core\srs.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\core\types.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\finder\lookup.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\finder\marker.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\finder\percentage.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\finder\perfect_clear\full_finder.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\finder\permutations.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\finder\spins.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\finder\types.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\fumen\color_field.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sfinder-cpp\src\fumen\parser.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
+    <Filter Include="ソース ファイル\sfinder">
+      <UniqueIdentifier>{7d68a3d3-4bac-4358-9b25-9d956460c6cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\core\bits.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\core\factory.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\core\field.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\core\moves.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\core\srs.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\fumen\color_field.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\fumen\parser.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\sfinder\lookup.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\sfinder\marker.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\sfinder\percentage.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\sfinder\permutations.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
+    <ClCompile Include="sfinder-cpp\src\sfinder\spins.cpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\bits.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\factory.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\field.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\moves.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\srs.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\lookup.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\marker.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\percentage.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\permutations.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\spins.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\fumen\color_field.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\fumen\parser.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sfinder-cpp\src\core\bits.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\core\factory.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\core\field.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\core\moves.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\core\piece.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\core\srs.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\core\types.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\fumen\color_field.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\fumen\parser.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\sfinder\lookup.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\sfinder\marker.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\sfinder\percentage.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\sfinder\perfect_clear\full_finder.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\sfinder\permutations.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\sfinder\spins.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="sfinder-cpp\src\sfinder\types.hpp">
+      <Filter>ソース ファイル\sfinder</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

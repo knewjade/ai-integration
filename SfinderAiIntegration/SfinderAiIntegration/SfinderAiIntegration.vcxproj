@@ -157,69 +157,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\sfinder-cpp\src\core\bits.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\core\factory.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\core\field.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\core\moves.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\core\piece.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\core\srs.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\core\types.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\finder\lookup.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\finder\marker.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\finder\percentage.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\finder\perfect_clear\full_finder.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\finder\permutations.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\finder\spins.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\finder\types.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\fumen\color_field.hpp" />
-    <ClInclude Include="..\sfinder-cpp\src\fumen\parser.hpp" />
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\sfinder-cpp\src\core\bits.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\factory.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\field.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\moves.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\core\srs.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\lookup.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\marker.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\percentage.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\permutations.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\finder\spins.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\fumen\color_field.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="..\sfinder-cpp\src\fumen\parser.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="sfinder-cpp\src\core\bits.cpp" />
+    <ClCompile Include="sfinder-cpp\src\core\factory.cpp" />
+    <ClCompile Include="sfinder-cpp\src\core\field.cpp" />
+    <ClCompile Include="sfinder-cpp\src\core\moves.cpp" />
+    <ClCompile Include="sfinder-cpp\src\core\srs.cpp" />
+    <ClCompile Include="sfinder-cpp\src\fumen\color_field.cpp" />
+    <ClCompile Include="sfinder-cpp\src\fumen\parser.cpp" />
+    <ClCompile Include="sfinder-cpp\src\sfinder\lookup.cpp" />
+    <ClCompile Include="sfinder-cpp\src\sfinder\marker.cpp" />
+    <ClCompile Include="sfinder-cpp\src\sfinder\percentage.cpp" />
+    <ClCompile Include="sfinder-cpp\src\sfinder\permutations.cpp" />
+    <ClCompile Include="sfinder-cpp\src\sfinder\spins.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="sfinder-cpp\src\core\bits.hpp" />
+    <ClInclude Include="sfinder-cpp\src\core\factory.hpp" />
+    <ClInclude Include="sfinder-cpp\src\core\field.hpp" />
+    <ClInclude Include="sfinder-cpp\src\core\moves.hpp" />
+    <ClInclude Include="sfinder-cpp\src\core\piece.hpp" />
+    <ClInclude Include="sfinder-cpp\src\core\srs.hpp" />
+    <ClInclude Include="sfinder-cpp\src\core\types.hpp" />
+    <ClInclude Include="sfinder-cpp\src\fumen\color_field.hpp" />
+    <ClInclude Include="sfinder-cpp\src\fumen\parser.hpp" />
+    <ClInclude Include="sfinder-cpp\src\sfinder\lookup.hpp" />
+    <ClInclude Include="sfinder-cpp\src\sfinder\marker.hpp" />
+    <ClInclude Include="sfinder-cpp\src\sfinder\percentage.hpp" />
+    <ClInclude Include="sfinder-cpp\src\sfinder\perfect_clear\full_finder.hpp" />
+    <ClInclude Include="sfinder-cpp\src\sfinder\permutations.hpp" />
+    <ClInclude Include="sfinder-cpp\src\sfinder\spins.hpp" />
+    <ClInclude Include="sfinder-cpp\src\sfinder\types.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
